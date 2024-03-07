@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&');
+body {
+    margin: 0;
+    padding: 0;
+    background-size: 800% 800%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'JetBrains Mono', monospace;
+    overflow: hidden;
+    background-image: linear-gradient(124deg, #ff470f, #ff3860, #b86bff, #3273dc);
+    animation: rainbow 8s ease infinite; 
+    -webkit-animation: rainbow 8s ease infinite;
+}
+
+.container {
+    position: relative;
+    width: 90%;
+    max-width: 850px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 1rem;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
+    margin: 2rem auto;
+    width: 100%;
+    max-width: calc(100% - 4rem);
+}
+
+.profile-pic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.profile-pic img {
+    width: 8rem;
+    height: auto;
+    border-radius: 25%;
+    margin-bottom: 1rem;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.profile-pic h2 {
+    margin: 0;
+    color: #333;
+    animation: slideInLeft 1s ease-in-out;
+}
+
+.profile-text {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    text-align: center;
+}
+
+.profile-text p {
+    margin: 0;
+    color: #666;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.buttons a {
+    text-decoration: none;
+    background-color: #fcfcfc;
+    color: #333;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in;
+}
+
+.buttons a:hover {
+    background-color: #dddddd;
+    color: #444;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes rainbow {
+    0% {
+        background-position: 1% 80%;
+    }
+    50% {
+        background-position: 99% 20%;
+    }
+    100% {
+        background-position: 1% 80%;
+    }
+}
+
+@-webkit-keyframes rainbow {
+    0% {
+        background-position: 1% 80%;
+    }
+    50% {
+        background-position: 99% 20%;
+    }
+    100% {
+        background-position: 1% 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-text {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .buttons a {
+        margin-right: 0.5rem;
+    }
+}
