@@ -64,7 +64,6 @@ body {
 .profile-text p {
     margin: 0;
     color: #666;
-    animation: slideInRight 1s ease-in-out;
 }
 
 .buttons {
@@ -99,26 +98,6 @@ body {
 
     to {
         opacity: 1;
-    }
-}
-
-@keyframes slideInLeft {
-    from {
-        transform: translateX(-100%);
-    }
-
-    to {
-        transform: translateX(0);
-    }
-}
-
-@keyframes slideInRight {
-    from {
-        transform: translateX(100%);
-    }
-
-    to {
-        transform: translateX(0);
     }
 }
 
