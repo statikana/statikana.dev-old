@@ -9,9 +9,9 @@ body {
     height: 100vh;
     font-family: 'JetBrains Mono', monospace;
     overflow: hidden;
-    background-image: linear-gradient(124deg, #ff470f, #ff3860, #b86bff, #3273dc);
-    animation: rainbow 8s ease infinite; 
-    -webkit-animation: rainbow 8s ease infinite;
+    background-image: linear-gradient(124deg, #240cf8, #77adff, #20f1c4, #2661a5);
+    animation: rainbow 16s ease infinite;
+    -webkit-animation: rainbow 16s ease infinite;
 }
 
 .container {
@@ -25,7 +25,7 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 2rem;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.438);
     border-radius: 1rem;
     backdrop-filter: blur(8px);
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
