@@ -101,6 +101,18 @@ body {
     }
 }
 
+@keyframes rainbow {
+    0% {
+        background-position: 1% 80%;
+    }
+    50% {
+        background-position: 99% 20%;
+    }
+    100% {
+        background-position: 1% 80%;
+    }
+}
+
 @-webkit-keyframes rainbow {
     0% {
         background-position: 1% 80%;
