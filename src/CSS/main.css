@@ -14,6 +14,14 @@ body {
     -webkit-animation: rainbow 16s ease infinite;
 }
 
+#nameTypewrite {
+    font-size: 1.5rem;
+}
+
+#descriptionTypewrite {
+    font-size: .9rem;
+}
+
 .container {
     position: relative;
     width: 90%;
