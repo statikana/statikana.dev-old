@@ -121,8 +121,8 @@ body {
 }
 
 .hallow-buttons a:hover {
-    background-color: #dddddd;
-    color: #444444;
+    background-color: #fcfcfc;
+    color: #333;
 }
 
 .buttons {
@@ -147,8 +147,8 @@ body {
 }
 
 .buttons a:hover {
-    background-color: #ffffff;
-    color: #333;
+    background-color: #000;
+    color: #fcfcfc;
 }
 
 @keyframes fadeIn {
