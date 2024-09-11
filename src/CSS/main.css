@@ -75,6 +75,7 @@ body {
 }
 
 .res-list {
+    justify-content: left;
     border-radius: .5rem;
     background-color: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(8px);
