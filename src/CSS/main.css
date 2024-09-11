@@ -24,7 +24,19 @@ body {
     max-width: 850px;
 }
 
-.card 
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background-color: rgba(190, 49, 49, 0.438);
+    border-radius: 1rem;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
+    margin: 2rem auto;
+    width: 100%;
+    max-width: calc(100% - 4rem);
+}
+
 .res-card {
     display: flex;
     flex-direction: column;
