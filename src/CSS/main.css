@@ -84,6 +84,14 @@ body {
     color: #868686;
 }
 
+.li {
+    justify-content: left;
+    color: #fcfcfc;
+}
+.li a {
+    color: #6e47ec;
+}
+
 .hallow-buttons {
     display: flex;
     justify-content: center;
