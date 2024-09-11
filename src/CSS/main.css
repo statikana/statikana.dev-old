@@ -11,6 +11,7 @@ body {
     font-family: 'JetBrains Mono', monospace;
     overflow: hidden;
     background-color: rgba(0, 0, 0, 0.93);
+    overflow-y: auto;
 }
 
 #nameTypewrite {
