@@ -147,8 +147,8 @@ body {
 }
 
 .buttons a:hover {
-    background-color: #dddddd;
-    color: #444444;
+    background-color: #ffffff;
+    color: #333;
 }
 
 @keyframes fadeIn {
