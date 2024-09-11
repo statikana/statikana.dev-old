@@ -76,7 +76,9 @@ body {
 }
 
 .res-list {
-    box-shadow: #000000;
+    box-shadow: #000000aa;
+    border-radius: .5rem;
+    background-color: #aaaaaaaa
 }
 
 .res {
