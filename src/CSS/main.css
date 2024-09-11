@@ -120,6 +120,11 @@ body {
     transition: background-color 0.3s ease-in;
 }
 
+.hallow-buttons a:hover {
+    background-color: #dddddd;
+    color: #444444;
+}
+
 .buttons {
     display: flex;
     justify-content: center;
