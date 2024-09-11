@@ -67,10 +67,9 @@ body {
     background-color: rgba(0, 0, 0, 0.6);
 }
 
-.profile-pic h2 
-.res-title h2 {
+.h2 {
     margin: 0;
-    color: #fff;
+    color: #fcfcfc;
 }
 
 .profile-text {
