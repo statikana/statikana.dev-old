@@ -67,7 +67,8 @@ body {
     background-color: rgba(0, 0, 0, 0.6);
 }
 
-.profile-pic h2 {
+.profile-pic h2 
+.res-title h2 {
     margin: 0;
     color: #333;
     animation: slideInLeft 1s ease-in-out;
