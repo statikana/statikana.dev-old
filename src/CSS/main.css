@@ -84,10 +84,13 @@ body {
     color: #868686;
 }
 
-.li {
-    justify-content: left;
+.ul {
+    box-shadow: #000000;
+    background-color: #00000099;
     color: #fcfcfc;
+    justify-content: left;
 }
+
 .li a {
     color: #6e47ec;
 }
