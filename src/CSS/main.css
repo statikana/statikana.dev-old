@@ -84,14 +84,16 @@ body {
     color: #868686;
 }
 
-.cool {
+.res-list {
     box-shadow: #000000;
-    background-color: #00000099;
+}
+
+.res {
     color: #fcfcfc;
     justify-content: left;
 }
 
-.cool a {
+.res a {
     color: #6e47ec;
 }
 
