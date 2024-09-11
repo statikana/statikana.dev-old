@@ -98,11 +98,10 @@ body {
     background-color: #00000000;
     color: #fcfcfc;
     border-color: #333333;
-    border-width: 5px;
+    border-width: 30px;
     padding: 1rem 2rem;
     border-radius: 0.5rem;
     margin-right: 1rem;
-    margin-bottom: 1rem;
 
     box-shadow: .5rem .5rem 1rem rgba(0, 0, 0, .3);
     transition: background-color 0.3s ease-in;
