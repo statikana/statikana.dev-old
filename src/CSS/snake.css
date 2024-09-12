@@ -1,9 +1,9 @@
-/* Write CSS Here */
-body {
-    text-align: center;
-}
-.geeks {
-    font-size: 40px;
-    font-weight: bold;
-    color: green;
+.grid {
+	width: 400px;
+	height: 400px;
+	border-width: 3px;
+	border-style: solid;
+	background-color: grey;
+	flex-wrap: wrap;
+	flex: auto;
 }
