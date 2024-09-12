@@ -85,6 +85,10 @@ h2 {
     color: #fcfcfc;
 }
 
+.res-list-title {
+    color: #fcfcfc
+}
+
 .profile-text {
     padding-left: 2rem;
     padding-right: 2rem;
@@ -98,20 +102,15 @@ h2 {
 
 .res-list {
     justify-content: left;
+    color: #fcfcfc;
     border-radius: .5rem;
     background-color: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(8px);
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
 }
 
-.res {
-    color: #fcfcfc;
-    justify-content: left;
-    text-align: left;
-}
-
-.res a {
-    color: #6e47ec;
+.res-list li a {
+    color: #b49dfe;
 }
 
 .hallow-buttons {
@@ -174,16 +173,5 @@ h2 {
 
     to {
         opacity: 1;
-    }
-}
-
-@media (max-width: 768px) {
-    .profile-text {
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    .buttons a {
-        margin-right: 0.5rem;
     }
 }
