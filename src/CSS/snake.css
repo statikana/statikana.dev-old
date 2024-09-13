@@ -1,9 +1,18 @@
-.grid {
-	width: 400px;
-	height: 400px;
+.snake-canvas {
+	width: 800px;
+	height: 800px;
 	border-width: 3px;
 	border-style: solid;
 	background-color: grey;
 	flex-wrap: wrap;
 	flex: auto;
+}
+
+.square {
+	color: white;
+	border-style: solid;
+	border-width: 1px;
+	width: 80px;
+	height: 80px;
+	flex-wrap: wrap;
 }
