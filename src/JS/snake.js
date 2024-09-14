@@ -1,5 +1,7 @@
 const width = 10;
 const height = 10;
+
+
 var squares =
 	[]; /* representation of what the canvas should be showing ... s=snake, a=apple, x=blank */
 
@@ -10,7 +12,7 @@ var snake = [
 ]; // head is front, tail is back
 var apple = [];
 
-var canvas = document.querySelector(".snake-canvas");
+var canvas = null;
 var direction = "ArrowRight";
 
 document.addEventListener("keydown", onKey);
@@ -25,7 +27,10 @@ function coordinatesToIndex(x, y) {
 	return x + y * width;
 }
 
+
 function createBoard() {
+	canvas = document.querySelector("div canvas");
+	console.log(canvas);
 	createSquares();
 	placeRandomApple();
 	draw();
@@ -33,10 +38,17 @@ function createBoard() {
 
 function placeRandomApple() {
 	let apple_coords = snake[0];
-	while (snake.includes(apple_coords)) {
+	placed = false;
+	while (!placed) {
 		apple_coords = indexToCoordinates(
 			Math.floor(Math.random() * width * height)
 		);
+		placed = true;
+		snake.forEach(pos => {
+			if (apple_coords[0] == pos[0] && apple_coords[1] == pos[1]) {
+				placed = false;
+			}
+		});
 	}
 	apple = apple_coords;
 }
@@ -161,35 +173,44 @@ function setSquares() {
 }
 
 function draw() {
-	/* draws `squares` to the canvass */
+	/* draws `squares` to the canvas */
 	console.log("draw");
 	createSquares();
 	setSquares();
 
 	let ctx = canvas.getContext("2d");
-	for (let i = 0; i < 800; i += 80) {
-		for (let j = 0; j < 800; j += 80) {
-			item = squares[j / 80][i / 80];
+	for (let i = 0; i < 600; i += 60) {
+		for (let j = 0; j < 600; j += 60) {
+			item = squares[j / 60][i / 60];
 			let fill = "";
+			let is_bordered = false;
 			switch (item) {
 				case "x":
 					fill = "#222222";
 					break;
 				case "s":
 					fill = "#00ff00";
+					is_bordered = true;
 					break;
 				case "h":
-					fill = "#00dd00";
+					fill = "#00bb00";
+					is_bordered = true;
 					break;
 				case "a":
 					fill = "#ff0000";
+					is_bordered = true;
 					break;
 				default:
-					fill = "#ffffff";
+					fill = "#0000ff";
 					break;
 			}
+			ctx.fillStyle = "#222222";
+			ctx.fillRect(i, j, 60, 60);	
 			ctx.fillStyle = fill;
-			ctx.fillRect(i, j, 80, 80);
+			if (is_bordered) {
+				ctx.fillRect(i+5, j+5, 50, 50);
+			} else {
+			}
 		}
 	}
 }

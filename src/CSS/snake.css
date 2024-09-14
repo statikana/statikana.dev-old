@@ -1,18 +1,84 @@
-.snake-canvas {
-	width: 800px;
-	height: 800px;
-	border-width: 3px;
-	border-style: solid;
-	background-color: grey;
-	flex-wrap: wrap;
-	flex: auto;
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&");
+
+body {
+	margin: 0;
+	padding: 0;
+	background-size: 800% 800%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	font-family: "JetBrains Mono", monospace;
+	overflow: hidden;
+	background-color: rgba(0, 0, 0, 0.93);
+	overflow-y: auto;
 }
 
-.square {
-	color: white;
-	border-style: solid;
-	border-width: 1px;
-	width: 80px;
-	height: 80px;
+.container {
+	position: relative;
+	width: 90%;
+	max-width: 850px;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	padding: 2rem;
+	background-color: rgba(190, 49, 49, 0.438);
+	border-radius: 1rem;
+	backdrop-filter: blur(8px);
+	box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
+	margin: 2rem auto;
+	width: 100%;
+	max-width: calc(100% - 4rem);
+	align-items: center;
+	text-align: center;
+}
+
+h2 {
+	color: #ffffff;
+}  
+
+.snake-canvas {
+	width: 600px;
+	height: 600px;
+	margin: 0px;
+	display: flex;
+	background: #222222;
+}
+
+.hallow-buttons {
+	display: flex;
+	justify-content: center;
 	flex-wrap: wrap;
+	margin-top: 2rem;
+}
+
+.hallow-buttons a {
+	text-decoration: none;
+	text-decoration: none;
+	background-color: #00000000;
+	color: #fcfcfc;
+	border-color: #333333;
+	border-width: 30px;
+	padding: 1rem 2rem;
+	border-radius: 0.5rem;
+	margin-right: 1rem;
+
+	box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
+	transition: background-color 0.3s ease-in;
+}
+
+.hallow-buttons a:hover {
+	background-color: #fcfcfc;
+	color: #333;
+}
+  
+
+.snake-canvas {
+	width: 600px;
+	height: 600px;
+	margin: 0px;
+	display: flex;
+	background: #222222;
 }
