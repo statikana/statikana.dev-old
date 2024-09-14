@@ -35,8 +35,9 @@ body {
 	text-align: center;
 }
 
-h2 {
+h2, h3 {
 	color: #ffffff;
+	margin: .3rem;
 }  
 
 .snake-canvas {
