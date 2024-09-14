@@ -10,14 +10,24 @@ var snake = [
 	[0, 1],
 	[0, 0],
 ]; // head is front, tail is back
-var apple = [];
+var apple = null;
 
-var canvas = null;
-var direction = "ArrowRight";
+var moving_direction = "ArrowRight";
+var latest_direction = "ArrowRight";
+
+var started = false;
 
 document.addEventListener("keydown", onKey);
 
-window.onload = createBoard;
+window.onload = function ()  {
+	placeRandomApple();
+	draw();
+};
+
+function startGame() {
+	createBoard();
+	setInterval(frame, 350);
+}
 
 function indexToCoordinates(index) {
 	return [index % width, Math.floor(index / height)];
@@ -29,10 +39,10 @@ function coordinatesToIndex(x, y) {
 
 
 function createBoard() {
-	canvas = document.querySelector("div canvas");
-	console.log(canvas);
 	createSquares();
-	placeRandomApple();
+	if (apple == null) {
+		placeRandomApple();
+	}
 	draw();
 }
 
@@ -61,8 +71,12 @@ function onKey(key) {
 	} else if (equalsInverseDirection(key.code)) {
 		return;
 	} else {
-		direction = key.code;
-		frame();
+		latest_direction = key.code;
+
+		if (!started) {
+			started = true;
+			startGame();
+		}
 	}
 }
 
@@ -71,16 +85,16 @@ function equalsInverseDirection(code) {
 	switch (code) {
 		case "ArrowUp":
 		case "KeyW":
-			return ["ArrowDown", "KeyS"].includes(direction);
+			return ["ArrowDown", "KeyS"].includes(moving_direction);
 		case "ArrowRight":
 		case "KeyD":
-			return ["ArrowLeft", "KeyA"].includes(direction);
+			return ["ArrowLeft", "KeyA"].includes(moving_direction);
 		case "ArrowDown":
 		case "KeyS":
-			return ["ArrowUp", "KeyW"].includes(direction);
+			return ["ArrowUp", "KeyW"].includes(moving_direction);
 		case "ArrowLeft":
 		case "KeyA":
-			return ["ArrowRight", "KeyD"].includes(direction);
+			return ["ArrowRight", "KeyD"].includes(moving_direction);
 		default:
 			return null;
 	}
@@ -88,7 +102,6 @@ function equalsInverseDirection(code) {
 
 function frame() {
 	/* updates the frame in the game */
-	console.log("frame");
 	calculateHead();
 	checkForSelfCollision();
 	draw();
@@ -99,6 +112,7 @@ function checkForSelfCollision() {
 	snake.slice(1).forEach(pos => {
 		if (pos[0] == head[0] && pos[1] == head[1]) {
 			alert("You ran into yourself! Press space to try again.");
+			location.reload();
 		}
 	});
 }
@@ -107,7 +121,7 @@ function calculateHead() {
 	/* moves the head in the indicated arrow direction */
 	let head_coords = snake[0];
 	let new_coords = [-1, -1];
-	switch (direction) {
+	switch (latest_direction) {
 		case "ArrowUp":
 		case "KeyW":
 			new_coords = [head_coords[0] - 1, head_coords[1]];
@@ -144,10 +158,10 @@ function calculateHead() {
 
 	if (apple[0] != head[0] || apple[1] != head[1]) {
 		snake.pop();
-		console.log("pop ^")
 	} else {
 		placeRandomApple();
 	}
+	moving_direction = latest_direction;
 	return true;
 }
 
@@ -169,15 +183,16 @@ function setSquares() {
 	});
 	squares[snake[0][0]][snake[0][1]] = "h";
 
-	squares[apple[0]][apple[1]] = "a";
+	if (apple != null) {
+		squares[apple[0]][apple[1]] = "a";
+	}
 }
 
 function draw() {
 	/* draws `squares` to the canvas */
-	console.log("draw");
 	createSquares();
 	setSquares();
-
+	let canvas = document.querySelector("div canvas");
 	let ctx = canvas.getContext("2d");
 	for (let i = 0; i < 600; i += 60) {
 		for (let j = 0; j < 600; j += 60) {
