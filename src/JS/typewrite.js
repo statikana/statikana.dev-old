@@ -1,7 +1,8 @@
 var nameText = document.getElementById('nameTypewrite');
 
 var writeNameText = new Typewriter(nameText, {
-    loop: false
+    loop: false,
+    delay: 80
 });
 
 function runWithDelay() {

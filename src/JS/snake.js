@@ -209,7 +209,6 @@ function draw() {
 			ctx.fillStyle = fill;
 			if (is_bordered) {
 				ctx.fillRect(i+5, j+5, 50, 50);
-			} else {
 			}
 		}
 	}
