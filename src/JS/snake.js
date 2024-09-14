@@ -111,7 +111,7 @@ function checkForSelfCollision() {
 	let head = snake[0];
 	snake.slice(1).forEach(pos => {
 		if (pos[0] == head[0] && pos[1] == head[1]) {
-			alert("You ran into yourself! Press space to try again.");
+			alert("You ran into yourself! Press \"OK\" to try again.");
 			location.reload();
 		}
 	});
