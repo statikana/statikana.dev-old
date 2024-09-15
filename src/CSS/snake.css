@@ -41,8 +41,6 @@ h2, h3 {
 }  
 
 .snake-canvas {
-	width: 600px;
-	height: 600px;
 	margin: 0px;
 	display: flex;
 	background: #222222;
@@ -73,13 +71,4 @@ h2, h3 {
 .hallow-buttons a:hover {
 	background-color: #fcfcfc;
 	color: #333;
-}
-  
-
-.snake-canvas {
-	width: 600px;
-	height: 600px;
-	margin: 0px;
-	display: flex;
-	background: #222222;
 }
